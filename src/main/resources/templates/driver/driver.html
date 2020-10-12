@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/Driver.css">
+<link rel="stylesheet" type="text/css" href="../css/loginForm.css">
+<title>Driver</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<!----from---->
+	<div id="id01" class="modal">
+
+
+		<form class="modal-content animate" action="/action_page.php"
+			method="post">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'"
+					class="close" title="Close Modal">&times;</span> <img
+					src="../image/logoA.png" alt="Avatar" class="avatar">
+				<h3>Admin</h3>
+				<h3>Admin@gmail.com</h3>
+				<a href="manager">
+					<button type="button"
+						onclick="document.getElementById('id01').style.display='none'"
+						class="Manage bt">Manage your Account</button>
+				</a>
+			</div>
+
+			<div class="container" style="background-color: #f1f1f1">
+				<button type="button" id="add1" class="Add bt">Add another
+					account</button>
+				<a href="home"><button type="button" class="SignOut bt">Sign
+						Out</button></a>
+				<button type="button"
+					onclick="document.getElementById('id01').style.display='none'"
+					class="cancelbtn bt">Cancel</button>
+
+			</div>
+		</form>
+
+
+
+	</div>
+	<!----from---->
+	<div class="all">
+		<div class="header" style="white-space: nowrap">
+
+			<a href=""><img src="../image/logo.png"></a>
+			<h1>Driver</h1>
+			<div class="container h-100"
+				style="margin-right: 500px; margin-top: 20px;">
+				<div class="d-flex justify-content-center h-100">
+					<div class="searchbar">
+						<input class="search_input" type="text" name=""
+							placeholder="Search..."> <a href="#" class="search_icon"><i
+							class="fas fa-search"></i></a>
+					</div>
+				</div>
+			</div>
+			<button
+				onclick="document.getElementById('id01').style.display='block'"
+				style="width: auto; background-color: #FFCCFF; border-style: none;">
+				<img src="../image/logoA.png">
+			</button>
+
+		</div>
+		<div class="bodyContent">
+			<!----------------left--------------------------->
+
+			<div class="left">
+
+
+				<a href="#"><button id="bt">
+						<img src="../image/new.png">New
+					</button></a>
+				<div class="menuHide" style="display: none;">
+					<ul>
+						<li><a href="create"><button>Folder</button></a></li>
+						<li>
+						<form action="upFile" method="post" enctype="multipart/form-data" >
+						<input type="file" name="file" >
+						<a href=""><button>Upload File</button></a>
+						</form>
+						
+						</li>
+						<li><a href=""><button>Upload Folder</button></a></li>
+					</ul>
+
+				</div>
+
+				<div class="vertical-menu">
+
+					<a href="#"><p>
+							&emsp;<img src="../image/disk.png">&ensp;My Driver
+						</p></a> <a href="#"><p>
+							&emsp;<img src="../image/share.png">&ensp;Share with me
+						</p></a> <a href="#"><p>
+							&emsp;<img src="../image/time.png">&ensp;Recent
+						</p></a> <a href="#"><p>
+							&emsp;<img src="../image/star.png">&ensp;Stareed
+						</p></a> <a href="#"><p>
+							&emsp;<img src="../image/trash.png">&ensp;Trash
+						</p></a>
+				</div>
+				<img src="../image/storage.png">
+			</div>
+			<div class="line"></div>
+			<!-------------right------------------------->
+			<div class="right">
+				<div class="rightMenu">
+					<a href="#"><h3>Share</h3></a>
+					<h3>></h3>
+					<a href=""><h3>File</h3></a>
+					<h3>></h3>
+					<a href=""><h3>Anh Gai</h3></a> <a href=""><img
+						src="../image/shareAcount.png"></a> <a href=""><img
+						src="../image/info.png"></a>
+				</div>
+				<div class="line1"></div>
+
+				<div class="file">
+					
+					<!--------item file------->
+					<div th:each="f: ${listFile}" class="item">
+						<a href="" >
+						<img th:if="${f.extension =='mp3'}"  src="../image/audioFile.png">
+						<img th:if="${f.extension =='mp4'}" src="../image/videoFile.png">
+						<img th:if="${f.extension ==''}" src="../image/folder.png">
+							<h3 th:text="${f.name}" ></h3>
+						</a>
+					
+					</div>
+					<!--------item file------->
+					
+
+
+				</div>
+
+			</div>
+		</div>
+</body>
+<script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="../js/driver.js"></script>
+</html>

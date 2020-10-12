@@ -1,0 +1,199 @@
+body h1{
+font-family: 'Helvetica', 'Arial', sans-serif;
+font-size: 45px;
+color: #444444;
+}
+body h3{
+font-family: 'Helvetica', 'Arial', sans-serif;
+font-size: 30px;
+color: #444444;
+}
+body p{
+font-family: 'Helvetica', 'Arial', sans-serif;
+font-size: 18px;
+color: #444444;
+}
+.header{
+display: flex;
+background-color: #FFCCFF;
+}
+.header h1{
+margin-top:  20px;
+}
+.header img{
+width: 90px;
+height: 90px;
+}
+/*seach*/
+.searchbar{
+margin-bottom: auto;
+margin-top: auto;
+height: 60px;
+background-color: #353b48;
+border-radius: 30px;
+padding: 10px;
+}
+.search_input{
+color: white;
+border: 0;
+outline: 0;
+background: none;
+width: 0;
+caret-color:transparent;
+line-height: 40px;
+transition: width 0.4s linear;
+}
+.searchbar:hover > .search_input{
+padding: 0 10px;
+width: 450px;
+caret-color:red;
+transition: width 0.4s linear;
+}
+.searchbar:hover > .search_icon{
+background: white;
+color: #e74c3c;
+}
+.search_icon{
+height: 40px;
+width: 40px;
+float: right;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+color:white;
+text-decoration:none;
+}
+/*------acount------*/
+
+/*body content*/
+.bodyContent{
+width: 100%;
+height: auto ;
+display: flex;
+margin: 30px auto ;
+}
+/*left*/
+.left{
+width: 17%;
+height: auto ;
+}
+.left button{
+margin-left: 20px;
+width: 100px;
+height: 40px;
+border-radius: 30px;
+border-style: none;
+background-color: #CCCCCC;
+font-style: bold;
+}
+.left button img{
+height: 30px;
+width: 30px;
+}
+/*---------menu button---------*/
+.menuHide{
+display: block;
+
+	}
+.menuHide button{
+background-color: #999900;
+width: 150px;
+border-radius: 1px;
+}
+
+.menuHide ul{
+list-style: none ;
+
+   
+}
+.menuHide ul li{
+
+margin: 20px;
+}
+	
+
+
+/*menu*/
+.vertical-menu {
+width: 200px;
+margin-top:   30px ;
+}
+.vertical-menu a {
+background-color: none;
+color: black;
+display: block;
+padding: 10px;
+}
+.vertical-menu a:hover {
+background-color: #ccc;
+text-decoration: none;
+color: black;
+}
+.vertical-menu a.active {
+background-color: none;
+color: white;
+}
+.vertical-menu img{
+height: 30px;
+width: 30px;
+}
+/*------line------*/
+.line{
+width: 1px;
+height: 500px;
+background-color: #999;
+}
+/*------right------*/
+.right{
+margin-left: 20px;
+width: 85%;
+height: auto ;
+}
+.rightMenu{
+display: flex ;
+}
+.rightMenu h3{
+margin-left:  13px;
+}
+.rightMenu a{
+display: block;
+text-decoration: none;
+margin-left:  13px;
+}
+.rightMenu a :hover{
+text-decoration: none ;
+background-color: #CCC;
+color: black;
+border-radius: 10px;
+}
+.rightMenu img{
+margin-left:  20px;
+height: 40px;
+width: 40px;
+}
+/*---------lint1----------*/
+.line1{
+width: auto;
+height: 1px;
+background-color: #999;
+}
+/*---------file---------*/
+.file {
+margin: 30px auto;
+display: grid ;
+grid-template-columns: 250px 250px 250px  250px 250px ;
+grid-template-rows:350px 350px 350px;
+grid-gap: 15px;
+}
+.file img{
+width: 250px;
+height: 250px;
+}
+.item h3{
+margin: 20px auto;
+margin-left: 30px;
+}
+.item :hover{
+background-color: #CCC;
+}
